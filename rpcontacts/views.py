@@ -67,6 +67,8 @@ class Window(QMainWindow):
 # self.centralWidget.setLayout(self.layout) sets the layout of the central widget to the horizontal layout created earlier.
 # This means that any widgets added to this layout will be horizontally arranged within the central widget.
 
+# -------------------------------------------------------------------------------------
+
 # Overall, these lines of code set up the main window for a PyQt5 application, including its title, size, central widget, and layout.
 # You can add more widgets and customize the user interface further within this window class to create your application.
 
