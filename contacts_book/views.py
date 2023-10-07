@@ -2,8 +2,12 @@
 # This module provides views to manage the contacts table.
 
 from PyQt5.QtWidgets import(
+    QAbstractItemView,
     QHBoxLayout,
     QMainWindow,
+    QPushButton,
+    QTableView,
+    QVBoxLayout,
     QWidget,
 )
 
@@ -16,6 +20,25 @@ class Window(QMainWindow):
         self.setCentralWidget(self.centralWidget)
         self.layout = QHBoxLayout()
         self.centralWidget.setLayout(self.layout)
+        self.setupUI()
+
+
+    def setupUI(self):
+        self.table = QTableView()
+        self.table.setSelectionBehavior(QAbstractItemView.SelectRows)
+        self.table.resizeColumnsToContents()
+
+        self.addButton = QPushButton("Add...")
+        self.deleteButton = QPushButton("Delete")
+        self.clearAllButton = QPushButton("Clear All")
+
+        layout = QVBoxLayout()
+        layout.addWidget(self.addButton)
+        layout.addWidget(self.deleteButton)
+        layout.addStretch()
+        layout.addWidget(self.clearAllButton)
+        self.layout.addWidget(self.table)
+        self.layout.addLayout(layout)
 
 
 
@@ -23,6 +46,7 @@ class Window(QMainWindow):
 # which is a module within the PyQt5 library
 # that provides tools and components for creating GUI applications.
 
+# 'QAbstractItemView' to provide access to the table view selection behavior policy.
 
 # 'QHBoxLayout' is a class in PyQt5 that represents a horizontal layout.
 # Layouts are used in GUI development to arrange widgets
@@ -30,6 +54,10 @@ class Window(QMainWindow):
 
 # 'QMainWindow' is a class in PyQt5 that represents the main application window.
 # It provides a framework for building GUI applications with a menu bar, toolbar, and central widget area.
+
+# 'QPushButton' to create the Add, Delete, and Clear All buttons.
+
+# 'QTableView' to provide the table-like view that displays the contacts list.
 
 # 'QWidget' is a fundamental class in PyQt5 that represents a generic widget.
 # Widgets are the basic building blocks of GUI applications in PyQt5, and they can be used to create various UI elements.
