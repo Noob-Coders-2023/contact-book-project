@@ -7,7 +7,7 @@ Step 1: Creating the Contact Book’s Skeleton App With PyQt
 - In this first step, we’ll create a minimal but functional PyQt GUI application to provide the foundation on which we’ll start building the contact book.
 We’ll also create the minimal required project structure, including the project’s main package and an entry-point script to run the application.
 
-<img src="https://drive.google.com/file/d/1yIT5IpkdxTvG4CBLH4a9pvwl2uqwi_kG/view?usp=drive_link">
+<img src="[/docs/logo.png](https://drive.google.com/file/d/1yIT5IpkdxTvG4CBLH4a9pvwl2uqwi_kG/view?usp=drive_link)" alt="Step 1 view"/>
 
 Step 2: Building the Contact Book’s GUI With Python
 
