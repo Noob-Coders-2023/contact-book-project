@@ -7,14 +7,14 @@ Step 1: Creating the Contact Book’s Skeleton App With PyQt
 - In this first step, we’ll create a minimal but functional PyQt GUI application to provide the foundation on which we’ll start building the contact book.
 We’ll also create the minimal required project structure, including the project’s main package and an entry-point script to run the application.
 
-<img src="https://drive.google.com/file/d/1yIT5IpkdxTvG4CBLH4a9pvwl2uqwi_kG/view?usp=drive_link">
+![Contact Book Step 1](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%201.png)
 
 Step 2: Building the Contact Book’s GUI With Python
 
 - Now that you’ve built the skeleton of your contact book application, you can start coding the main window’s GUI.
 At the end of this section, you’ll have completed the required steps to create the GUI of your contact book using Python and PyQt.
 
-<img src="https://drive.google.com/file/d/1s-aUPMUOEBiBpLtXXtyRJr-uLlSleCHp/view?usp=drive_link">
+![Contact Book Step 1](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%202.png)
 
 
 Step 3: Setting Up the Contact Book’s Database
