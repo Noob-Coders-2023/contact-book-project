@@ -2,7 +2,7 @@
 # This module provides views to manage the contacts table.
 
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import(
+from PyQt5.QtWidgets import (
     QAbstractItemView,
     QDialog,
     QDialogButtonBox,
@@ -18,6 +18,7 @@ from PyQt5.QtWidgets import(
 )
 from .model import ContactsModel
 
+
 class Window(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -31,13 +32,12 @@ class Window(QMainWindow):
         self.contactsModel = ContactsModel()
         self.setupUI()
 
-
     def setupUI(self):
         self.table = QTableView()
         self.table.setModel(self.contactsModel.model)
         self.table.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.table.resizeColumnsToContents()
-        
+
         self.addButton = QPushButton("Add...")
         self.addButton.clicked.connect(self.openAddDialog)
         self.deleteButton = QPushButton("Delete")
@@ -57,7 +57,8 @@ class Window(QMainWindow):
             self.contactsModel.addContact(dialog.data)
             self.table.resizeColumnsToContents()
 
-class AddDiolog(QDialog):
+
+class AddDialog(QDialog):
     def __init__(self, parent=None):
         super().__init__(parent=None)
         self.setWindowTitle("Add Contact")
@@ -171,7 +172,7 @@ class AddDiolog(QDialog):
 
     # if dialog.exec() == QDialog.Accepted:
     #     self.contactsModel.addContact(dialog.data)
-    #     self.table.resizeColumnsToContents()' 
+    #     self.table.resizeColumnsToContents()'
 
 # -------------------------------------------------------------------------------------
 
@@ -215,7 +216,7 @@ class AddDiolog(QDialog):
         #     "Error!",
         #     f"You must provide a contact's {field.objectName()}",
         # )
-        # self.data = None  # Reset .data                
+        # self.data = None  # Reset .data
         # # return' define a conditional statement that checks if the user has provided data for each field in the dialog. If not, then the dialog shows an error message that warns the user about the missing data.
 
     # 'self.data.append(field.text())' adds the user’s input for each field to .data.
@@ -226,5 +227,3 @@ class AddDiolog(QDialog):
 
 # Overall, these lines of code set up the main window for a PyQt5 application, including its title, size, central widget, and layout.
 # You can add more widgets and customize the user interface further within this window class to create your application.
-
-
