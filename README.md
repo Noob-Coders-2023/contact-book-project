@@ -2,6 +2,25 @@
 
 ## Build a Contact Book With Python, PyQt, and SQLite
 
+### Project Overview
+
+- To build our contact book application, we need to organize the code into modules and packages and give our project a coherent structure. In this project, we’ll use the following directories and files structure:<br>
+
+    contact_book_project/<br>
+│<br>
+├── contacts_book/<br>
+│   ├── __init__.py<br>
+│   ├── views.py<br>
+│   ├── database.py<br>
+│   ├── main.py<br>
+│   └── model.py<br>
+│<br>
+├── requirements.txt<br>
+├── README.md<br>
+└── contact_book.py<br>
+
+***
+
 ### Step 1: Creating the Contact Book’s Skeleton App With PyQt
 
 - * Structuring the Contact Book Project
