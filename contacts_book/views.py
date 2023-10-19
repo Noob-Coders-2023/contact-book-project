@@ -27,7 +27,7 @@ class Window(QMainWindow):
 
     def setupUI(self):
         self.table = QTableView()
-        self.table.setModel(self, ContactsModel.model)
+        self.table.setModel(self.contactsModel.model)
         self.table.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.table.resizeColumnsToContents()
 
