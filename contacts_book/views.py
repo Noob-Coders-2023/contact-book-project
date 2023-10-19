@@ -21,7 +21,7 @@ class Window(QMainWindow):
         self.setCentralWidget(self.centralWidget)
         self.layout = QHBoxLayout()
         self.centralWidget.setLayout(self.layout)
-        self.ContactsModel = ContactsModel()
+        self.contactsModel = ContactsModel()
         self.setupUI()
 
 
