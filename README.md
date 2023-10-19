@@ -52,3 +52,13 @@ Step 5: Creating New Contacts
 
 - At this step, our contact book application provides functionality to load, display, and update the information about our contacts. Even though we’re able to modify and update the contact information, we can neither add nor remove contacts from the list.
 In this section, we’ll provide the required functionality to add new contacts to the database, using a pop-up dialog to enter the new information.
+
+![Contact Book Step 3](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%205-1.png)
+
+- We define a conditional statement that checks if the user has provided data for each field in the dialog. If not, then the dialog shows an error message that warns the user about the missing data.
+
+![Contact Book Step 3](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%205-3.png)
+
+- And if the user has provided data for each field in the dialog, then it add the contact to the database by clicking OK.
+
+![Contact Book Step 3](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%205-2.png)
