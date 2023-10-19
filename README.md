@@ -25,5 +25,8 @@ Step 3: Setting Up the Contact Book’s Database
 
 - * Connecting to the Database With PyQt and SQLite
 - * Creating the contacts Table
+- * Testing the Contact Book’s Database
 
 - At this point, we’ve created a PyQt application and its main window’s GUI to build our contact book project. In this section, we’ll write code to define how the application connects to the contact database. To complete this step, we’ll use SQLite to handle the database and PyQt’s SQL support to connect the application to the database and to work with our contact data.
+
+![Contact Book Step 3](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%203.png)
