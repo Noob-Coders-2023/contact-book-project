@@ -83,6 +83,22 @@ class AddDiolog(QDialog):
         self.buttonsBox.rejected.connect(self.reject)
         self.layout.addWidget(self.buttonsBox)
 
+    def accept(self):
+        self.data = []
+        for field in (self.nameField, self.jobField, self.emailField):
+            if not field.text():
+                QMessageBox.critical(
+                    self,
+                    "Error!",
+                    f"You must provide a contact's {field.objectName()}",
+                )
+                self.data = None  # Reset .data
+                return
+
+            self.data.append(field.text())
+
+        super().accept()
+
 
 # 'from PyQt5.QtWidgets import' is importing classes and functions from the PyQt5.QtWidgets module,
 # which is a module within the PyQt5 library
@@ -168,6 +184,25 @@ class AddDiolog(QDialog):
         # In this case, we’ll rely on the dialog’s built-in .reject() slot, which closes the dialog without processing the input.
         # Other than that, we just need to code the .accept() slot.
 
+
+# 'def accept(self):' accept the data provided through the dialog.
+
+    # 'self.data = []' initializes .data to an empty list ([]). This list will store the user’s input data.
+
+    # 'for field in (self.nameField, self.jobField, self.emailField):' defines a for loop that iterates over the three line edits, or fields, in the dialog.
+
+        # if not field.text():
+        # QMessageBox.critical(
+        #     self,
+        #     "Error!",
+        #     f"You must provide a contact's {field.objectName()}",
+        # )
+        # self.data = None  # Reset .data                
+        # # return' define a conditional statement that checks if the user has provided data for each field in the dialog. If not, then the dialog shows an error message that warns the user about the missing data.
+
+    # 'self.data.append(field.text())' adds the user’s input for each field to .data.
+
+    # 'super().accept()' calls the superclass’s .accept() slot to provide the standard behavior that closes the dialog after the user clicks OK.
 
 # -------------------------------------------------------------------------------------
 
