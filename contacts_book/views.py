@@ -1,10 +1,16 @@
 # Creating the Application’s Main Window
 # This module provides views to manage the contacts table.
 
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import(
     QAbstractItemView,
+    QDialog,
+    QDialogButtonBox,
+    QFormLayout,
     QHBoxLayout,
+    QLineEdit,
     QMainWindow,
+    QMessageBox,
     QPushButton,
     QTableView,
     QVBoxLayout,
