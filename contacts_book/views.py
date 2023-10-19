@@ -36,8 +36,9 @@ class Window(QMainWindow):
         self.table.setModel(self.contactsModel.model)
         self.table.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.table.resizeColumnsToContents()
-
+        self.addButton.clicked.connect(self.openAddDialog)
         self.addButton = QPushButton("Add...")
+
         self.deleteButton = QPushButton("Delete")
         self.clearAllButton = QPushButton("Clear All")
 
@@ -49,6 +50,11 @@ class Window(QMainWindow):
         self.layout.addWidget(self.table)
         self.layout.addLayout(layout)
 
+    def openAddDialog(self):
+        dialog = AddDialog(self)
+        if dialog.exec() == QDialog.Accepted:
+            self.contactsModel.addContact(dialog.data)
+            self.table.resizeColumnsToContents()
 
 class AddDiolog(QDialog):
     def __init__(self, parent=None):
@@ -154,6 +160,17 @@ class AddDiolog(QDialog):
 
 # self.centralWidget.setLayout(self.layout) sets the layout of the central widget to the horizontal layout created earlier.
 # This means that any widgets added to this layout will be horizontally arranged within the central widget.
+
+# 'self.addButton.clicked.connect(self.openAddDialog)' connects the .clicked() signal of the Add button to the newly created slot, .openAddDialog().
+# This way, a click on the button will automatically call the slot.
+
+# 'def openAddDialog(self):' defines the .openAddDialog() slot.
+
+    # 'dialog = AddDialog(self)' creates an instance of AddDialog.
+
+    # if dialog.exec() == QDialog.Accepted:
+    #     self.contactsModel.addContact(dialog.data)
+    #     self.table.resizeColumnsToContents()' 
 
 # -------------------------------------------------------------------------------------
 
