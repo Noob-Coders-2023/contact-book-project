@@ -16,7 +16,7 @@ class ContactsModel:
         tableModel.select()
         headers = ("ID", "Name", "Job", "Email")
         for columnIndex, header in enumerate(headers):
-            tableModel.setHeaderData(columnIndex, Qt.horizontal, header)
+            tableModel.setHeaderData(columnIndex, Qt.Horizontal, header)
         return tableModel
 
 
