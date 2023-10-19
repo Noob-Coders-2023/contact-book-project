@@ -35,6 +35,14 @@ class ContactsModel:
         self.model.submitAll()
         self.model.select()
 
+    
+    def clearContacts(self):
+        self.model.setEditStrategy(QSqlTableModel.OnManualSubmit)
+        self.model.removeRows(0, self.model.rowCount())
+        self.model.submitAll()
+        self.model.setEditStrategy(QSqlTableModel.OnFieldChange)
+        self.model.select()
+
 # 'self.model = self._createModel()' define an instance attribute called .model to hold the data model.
 
 # 'tableModel = QSqlTableModel()' creates an instance of QSqlTableModel() called tableModel.
@@ -69,5 +77,19 @@ class ContactsModel:
 # 'self.model.removeRow(row)' removes the selected row.
 
 # 'self.model.submitAll()' submits the change to the database.
+
+# 'self.model.select()' reloads the data into the model.
+
+# 'def clearContacts(self):' remove all contacts in the database.
+
+# 'self.model.setEditStrategy(QSqlTableModel.OnManualSubmit)' allows us to cache all the changes until we call .submitAll() later on.
+# We need to do this because we’re changing several rows at the same time.
+
+# 'self.model.removeRows(0, self.model.rowCount())' removes all the rows from the model.
+
+# 'self.model.submitAll()' saves changes to the database.
+
+# 'self.model.setEditStrategy(QSqlTableModel.OnFieldChange)' resets the model’s .editStrategy property to its original value, QSqlTableModel.OnFieldChange.
+# If we don’t reset this property to its original value, then we won’t be able to update the contacts directly in the table view.
 
 # 'self.model.select()' reloads the data into the model.
