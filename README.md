@@ -13,6 +13,7 @@ We’ll also create the minimal required project structure, including the projec
 
 ![Contact Book Step 1](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%201.png)
 
+***
 
 ### Step 2: Building the Contact Book’s GUI With Python
 
@@ -21,6 +22,7 @@ At the end of this section, you’ll have completed the required steps to create
 
 ![Contact Book Step 2](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%202.png)
 
+***
 
 ### Step 3: Setting Up the Contact Book’s Database
 
@@ -30,8 +32,14 @@ At the end of this section, you’ll have completed the required steps to create
 
 - At this point, we’ve created a PyQt application and its main window’s GUI to build our contact book project. In this section, we’ll write code to define how the application connects to the contact database. To complete this step, we’ll use SQLite to handle the database and PyQt’s SQL support to connect the application to the database and to work with our contact data.
 
-![Contact Book Step 3](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%203.png)
+| Column  | Content |
+| ------------- | ------------- |
+| id  | An integer with the table’s primary key  |
+| name  | A string with the name of a contact  |
+| job  | A string with the job title of a contact  |
+| email  | A string with the email of a contact  |
 
+***
 
 ### Step 4: Displaying and Updating Existing Contacts
 
@@ -43,6 +51,7 @@ At the end of this section, you’ll have completed the required steps to create
 
 ![Contact Book Step 4](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%204.png)
 
+***
 
 ### Step 5: Creating New Contacts
 
@@ -63,6 +72,7 @@ In this section, we’ll provide the required functionality to add new contacts 
 
 ![Contact Book Step 5-2](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%205-2.png)
 
+***
 
 ### Step 6: Deleting Existing Contacts
 
