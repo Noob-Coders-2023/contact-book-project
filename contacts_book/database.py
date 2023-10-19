@@ -21,7 +21,7 @@ def _createContactsTable():
 
 
 def createConnection(databaseName):
-    connection = QSqlDatabase.addDatabase("ContactBookDB")
+    connection = QSqlDatabase.addDatabase("QSQLITE")
     connection.setDatabaseName(databaseName)
 
     if not connection.open():
