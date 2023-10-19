@@ -7,7 +7,7 @@ from PyQt5.QtSql import QSqlDatabase, QSqlQuery
 
 def _createContactsTable():
     createTableQuery = QSqlQuery()
-    return createTableQuerye.exec(
+    return createTableQuery.exec(
         """
         CREATE TABLE IF NOT EXISTS contacts (
             id INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE NOT NULL,
