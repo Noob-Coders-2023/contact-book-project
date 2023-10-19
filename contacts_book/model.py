@@ -12,7 +12,7 @@ class ContactsModel:
     def _createModel():
         tableModel = QSqlTableModel()
         tableModel.setTable("contacts")
-        tableModel.setEditStrategy(QSqlTableModel.OnFeildChange)
+        tableModel.setEditStrategy(QSqlTableModel.OnFieldChange)
         tableModel.select()
         headers = ("ID", "Name", "Job", "Email")
         for columnIndex, header in enumerate(headers):
