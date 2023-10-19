@@ -42,3 +42,13 @@ Step 4: Displaying and Updating Existing Contacts
 -To display our contact data in the application’s main window, we can use QTableView. This class is part of PyQt’s Model-View architecture and provides a robust and efficient way of displaying items from a PyQt model object.
 
 ![Contact Book Step 3](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%204.png)
+
+
+Step 5: Creating New Contacts
+
+- * Creating the Add Contact Dialog
+- * Launching the Add Contact Dialog
+- * Processing the Add Dialog’s Data in the Model
+
+- At this step, our contact book application provides functionality to load, display, and update the information about our contacts. Even though we’re able to modify and update the contact information, we can neither add nor remove contacts from the list.
+In this section, we’ll provide the required functionality to add new contacts to the database, using a pop-up dialog to enter the new information.
