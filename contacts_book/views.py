@@ -50,6 +50,39 @@ class Window(QMainWindow):
         self.layout.addLayout(layout)
 
 
+class AddDiolog(QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent=None)
+        self.setWindowTitle("Add Contact")
+        self.layout = QVBoxLayout()
+        self.setLayout(self.layout)
+        self.data = None
+
+        self.setupUI()
+
+    def setupUI(self):
+        self.nameField = QLineEdit()
+        self.nameField.setObjectName("Name")
+        self.jobField = QLineEdit()
+        self.jobField.setObjectName("Job")
+        self.emailField = QLineEdit()
+        self.emailField.setObjectName("Email")
+
+        layout = QFormLayout()
+        layout.addRow("Name:", self.nameField)
+        layout.addRow("Job:", self.jobField)
+        layout.addRow("Email:", self.emailField)
+        self.layout.addLayout(layout)
+
+        self.buttonsBox = QDialogButtonBox(self)
+        self.buttonsBox.setOrientation(Qt.Horizontal)
+        self.buttonsBox.setStandardButtons(
+            QDialogButtonBox.Ok | QDialogButtonBox.Cancel
+        )
+        self.buttonsBox.accepted.connect(self.accept)
+        self.buttonsBox.rejected.connect(self.reject)
+        self.layout.addWidget(self.buttonsBox)
+
 
 # 'from PyQt5.QtWidgets import' is importing classes and functions from the PyQt5.QtWidgets module,
 # which is a module within the PyQt5 library
@@ -105,6 +138,36 @@ class Window(QMainWindow):
 
 # self.centralWidget.setLayout(self.layout) sets the layout of the central widget to the horizontal layout created earlier.
 # This means that any widgets added to this layout will be horizontally arranged within the central widget.
+
+# -------------------------------------------------------------------------------------
+
+# 'class AddDialog(QDialog):' defines a new class that inherits from QDialog.
+
+# 'def __init__(self, parent=None): ...' define the class initializer.
+# 'self.data = None'  is an instance attribute that you’ll use to hold the data your users provide.
+
+# 'def setupUI(self):
+        # self.nameField = QLineEdit()
+        # self.nameField.setObjectName("Name") ...'  add three QLineEdit objects: name, job, and email.
+        # We’ll use these line edits to take the user’s input for the name, job description, and email of the contact to add.
+        # They represent the corresponding fields in the database.
+
+        # layout = QFormLayout()
+        # layout.addRow("Name:", self.nameField) ...' create a QFormLayout instance that arranges the line edits in a form.
+        # This layout manager also provides user-friendly labels for each line edit or field.
+
+        # self.buttonsBox = QDialogButtonBox(self)
+        # self.buttonsBox.setOrientation(Qt.Horizontal)
+        # self.buttonsBox.setStandardButtons(
+        #     QDialogButtonBox.Ok | QDialogButtonBox.Cancel
+        # )' add a QDialogButtonBox object that provides two standard buttons: OK and Cancel.
+        # The OK button accepts the user’s input and the Cancel button rejects it.
+
+        # self.buttonsBox.accepted.connect(self.accept)
+        # self.buttonsBox.rejected.connect(self.reject)' connect the dialog’s built-in .accepted() and .rejected() signals with the .accept() and reject() slots, respectively.
+        # In this case, we’ll rely on the dialog’s built-in .reject() slot, which closes the dialog without processing the input.
+        # Other than that, we just need to code the .accept() slot.
+
 
 # -------------------------------------------------------------------------------------
 
