@@ -2,7 +2,6 @@
 # This module provides a database connection.
 
 from PyQt5.QtWidgets import QMessageBox
-from PyQt5.QtSql import QSqlDatabase
 from PyQt5.QtSql import QSqlDatabase, QSqlQuery
 
 
@@ -23,7 +22,7 @@ def _createContactsTable():
 
 def createConnection(databaseName):
     connection = QSqlDatabase.addDatabase("ContactBookDB")
-    connection.setDatabaseName(ContactBookDB)
+    connection.setDatabaseName(databaseName)
 
     if not connection.open():
         QMessageBox.warning(
