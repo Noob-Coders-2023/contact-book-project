@@ -13,6 +13,7 @@ We’ll also create the minimal required project structure, including the projec
 
 ![Contact Book Step 1](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%201.png)
 
+
 Step 2: Building the Contact Book’s GUI With Python
 
 - Now that you’ve built the skeleton of your contact book application, you can start coding the main window’s GUI.
@@ -30,3 +31,14 @@ Step 3: Setting Up the Contact Book’s Database
 - At this point, we’ve created a PyQt application and its main window’s GUI to build our contact book project. In this section, we’ll write code to define how the application connects to the contact database. To complete this step, we’ll use SQLite to handle the database and PyQt’s SQL support to connect the application to the database and to work with our contact data.
 
 ![Contact Book Step 3](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%203.png)
+
+
+Step 4: Displaying and Updating Existing Contacts
+
+- * Creating a Model to Handle the Contact Data
+- * Connecting the Model to the View
+- * Displaying and Updating Contacts
+
+-To display our contact data in the application’s main window, we can use QTableView. This class is part of PyQt’s Model-View architecture and provides a robust and efficient way of displaying items from a PyQt model object.
+
+![Contact Book Step 3](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%204.png)
