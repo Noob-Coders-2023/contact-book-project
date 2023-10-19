@@ -10,6 +10,7 @@ from PyQt5.QtWidgets import(
     QVBoxLayout,
     QWidget,
 )
+from .model import ContactsModel
 
 class Window(QMainWindow):
     def __init__(self, parent=None):
@@ -20,11 +21,13 @@ class Window(QMainWindow):
         self.setCentralWidget(self.centralWidget)
         self.layout = QHBoxLayout()
         self.centralWidget.setLayout(self.layout)
+        self.ContactsModel = ContactsModel()
         self.setupUI()
 
 
     def setupUI(self):
         self.table = QTableView()
+        self.table.setModel(self, ContactsModel.model)
         self.table.setSelectionBehavior(QAbstractItemView.SelectRows)
         self.table.resizeColumnsToContents()
 
@@ -45,6 +48,8 @@ class Window(QMainWindow):
 # 'from PyQt5.QtWidgets import' is importing classes and functions from the PyQt5.QtWidgets module,
 # which is a module within the PyQt5 library
 # that provides tools and components for creating GUI applications.
+
+# 'from .model import ContactsModel' import ContactsModel from model.py.
 
 # 'QAbstractItemView' to provide access to the table view selection behavior policy.
 
