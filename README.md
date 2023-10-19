@@ -2,8 +2,8 @@
 
 ## Build a Contact Book With Python, PyQt, and SQLite
 
-> [Persian Document](../blob/main/Files/Persian%20Document.pdf)
-
+> [Persian Document](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Persian%20Document.pdf "سند فارسی")
+ 
 ### Project Overview
 
 - To build our contact book application, we need to organize the code into modules and packages and give our project a coherent structure. In this project, we’ll use the following directories and files structure:<br>
