@@ -76,7 +76,7 @@ class Window(QMainWindow):
             self.contactsModel.deleteContact(row)
 
 
-        def clearContacts(self):
+    def clearContacts(self):
         messageBox = QMessageBox.warning(
             self,
             "Warning!",
