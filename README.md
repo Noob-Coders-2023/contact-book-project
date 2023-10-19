@@ -1,8 +1,8 @@
 # contact-book-project
 
-Build a Contact Book With Python, PyQt, and SQLite
+## Build a Contact Book With Python, PyQt, and SQLite
 
-Step 1: Creating the Contact Book’s Skeleton App With PyQt
+### Step 1: Creating the Contact Book’s Skeleton App With PyQt
 
 - * Structuring the Contact Book Project
 - * Creating the Application’s Main Window
@@ -14,7 +14,7 @@ We’ll also create the minimal required project structure, including the projec
 ![Contact Book Step 1](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%201.png)
 
 
-Step 2: Building the Contact Book’s GUI With Python
+### Step 2: Building the Contact Book’s GUI With Python
 
 - Now that you’ve built the skeleton of your contact book application, you can start coding the main window’s GUI.
 At the end of this section, you’ll have completed the required steps to create the GUI of your contact book using Python and PyQt.
@@ -22,7 +22,7 @@ At the end of this section, you’ll have completed the required steps to create
 ![Contact Book Step 2](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%202.png)
 
 
-Step 3: Setting Up the Contact Book’s Database
+### Step 3: Setting Up the Contact Book’s Database
 
 - * Connecting to the Database With PyQt and SQLite
 - * Creating the contacts Table
@@ -33,7 +33,7 @@ Step 3: Setting Up the Contact Book’s Database
 ![Contact Book Step 3](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%203.png)
 
 
-Step 4: Displaying and Updating Existing Contacts
+### Step 4: Displaying and Updating Existing Contacts
 
 - * Creating a Model to Handle the Contact Data
 - * Connecting the Model to the View
@@ -44,7 +44,7 @@ Step 4: Displaying and Updating Existing Contacts
 ![Contact Book Step 4](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%204.png)
 
 
-Step 5: Creating New Contacts
+### Step 5: Creating New Contacts
 
 - * Creating the Add Contact Dialog
 - * Launching the Add Contact Dialog
@@ -64,7 +64,7 @@ In this section, we’ll provide the required functionality to add new contacts 
 ![Contact Book Step 5-2](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%205-2.png)
 
 
-Step 6: Deleting Existing Contacts
+### Step 6: Deleting Existing Contacts
 
 - * Deleting Selected Contacts
 - * Clearing the Contact Database
