@@ -29,6 +29,12 @@ class ContactsModel:
         self.model.submitAll()
         self.model.select()
 
+    
+    def deleteContact(self, row):
+        self.model.removeRow(row)
+        self.model.submitAll()
+        self.model.select()
+
 # 'self.model = self._createModel()' define an instance attribute called .model to hold the data model.
 
 # 'tableModel = QSqlTableModel()' creates an instance of QSqlTableModel() called tableModel.
@@ -57,3 +63,11 @@ class ContactsModel:
 # 'self.model.submitAll()' submits the changes to the database by calling .submitAll() on the model.
 
 # 'self.model.select()' reloads the data from the database into the model.
+
+# 'def deleteContact(self, row):' remove a contact from the database.
+
+# 'self.model.removeRow(row)' removes the selected row.
+
+# 'self.model.submitAll()' submits the change to the database.
+
+# 'self.model.select()' reloads the data into the model.
