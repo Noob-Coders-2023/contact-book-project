@@ -3,19 +3,10 @@
 
 import sys
 from PyQt5.QtWidgets import QApplication
-<<<<<<< HEAD
-=======
-from .database import createConnection
->>>>>>> origin/master
 from .views import Window
 
 def main():
     app = QApplication(sys.argv)
-<<<<<<< HEAD
-=======
-    if not createConnection("contacts.sqlite"):
-        sys.exit(1)
->>>>>>> origin/master
     win = Window()
     win.show()
     sys.exit(app.exec())
