@@ -1,10 +1,11 @@
-# contact-book-project
+# پروژه دفترچه تماس
 
-## Build a Contact Book With Python, PyQt, and SQLite
- 
-### Project Overview
+## ساخت یک دفترچه تماس با استفاده از پایتون، PyQt و SQLite
 
-- To build our contact book application, we need to organize the code into modules and packages and give our project a coherent structure. In this project, we’ll use the following directories and files structure:
+### مرور پروژه
+
+برای ساخت برنامه دفترچه تماس خود، ما باید کد را در ماژول‌ها و پکیج‌ها سازماندهی کنیم و به پروژه خود ساختاری منسجم بدهیم. در این پروژه، ما از ساختار زیر برای دایرکتوری‌ها و فایل‌ها استفاده خواهیم کرد:
+
   
     ```
     contact_book_project/
@@ -23,94 +24,94 @@
 
 ***
 
-### Step 1: Creating the Contact Book’s Skeleton App With PyQt
+### مرحله 1: ایجاد اسکلت برنامه دفترچه تماس با PyQt
 
-- Structuring the Contact Book Project
-- Creating the Application’s Main Window
-- Coding and Running the Application
+- ساختاردهی پروژه دفترچه تماس
+- ایجاد پنجره اصلی برنامه
+- کدنویسی و اجرای برنامه
 
-In this first step, we’ll create a minimal but functional PyQt GUI application to provide the foundation on which we’ll start building the contact book. We’ll also create the minimal required project structure, including the project’s main package and an entry-point script to run the application.
+در گام اول، ما یک اپلیکیشن رابط کاربری گرافیکی PyQt ساده اما کاربردی ایجاد می‌کنیم تا پایه‌ای را ارائه کنیم که بر اساس آن شروع به ساختن دفترچه تماس خواهیم کرد. ما همچنین حداقل ساختار پروژه مورد نیاز را ایجاد خواهیم کرد، که شامل پکیج اصلی پروژه و یک اسکریپت نقطه-ورودی برای اجرای برنامه است.
 
 ![Contact Book Step 1](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%201.png)
 
 ***
 
-### Step 2: Building the Contact Book’s GUI With Python
+### مرحله 2: ساخت رابط کاربری گرافیکی دفترچه تماس با پایتون
 
-Now that you’ve built the skeleton of your contact book application, you can start coding the main window’s GUI. At the end of this section, you’ll have completed the required steps to create the GUI of your contact book using Python and PyQt.
+اکنون که اسکلت اپلیکیشن دفترچه تماس خود را ایجاد ساخته‌ایم، می‌توانیم کدنویسی رابط کاربری گرافیکی پنجره اصلی را شروع کنیم. در پایان این بخش، مراحل لازم برای ایجاد رابط کاربری گرافیکی دفترچه تماس خود را با استفاده از پایتون و PyQt را تکمیل خواهیم کرد.
 
 ![Contact Book Step 2](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%202.png)
 
 ***
 
-### Step 3: Setting Up the Contact Book’s Database
+### مرحله 3: راه اندازی پایگاه داده دفترچه تماس
 
-- Connecting to the Database With PyQt and SQLite
-- Creating the contacts Table
-- Testing the Contact Book’s Database
+- اتصال به پایگاه داده با PyQt و SQLite
+- ایجاد جدول مخاطبان
+- آزمایش پایگاه داده دفترچه تماس
 
-At this point, we’ve created a PyQt application and its main window’s GUI to build our contact book project. In this section, we’ll write code to define how the application connects to the contact database. To complete this step, we’ll use SQLite to handle the database and PyQt’s SQL support to connect the application to the database and to work with our contact data.
+در این مرحله، ما یک برنامه PyQt و رابط کاربری گرافیکی پنجره اصلی آن را ایجاد کرده‌ایم تا پروژه دفترچه تماس خود را بسازیم. در این بخش، کدی را برای تعریف نحوه اتصال برنامه به پایگاه داده مخاطبان می نویسیم. برای تکمیل این مرحله، از SQLite برای مدیریت پایگاه داده و از پشتیبانی SQL PyQt برای اتصال برنامه به پایگاه داده و کار با داده‌های مخاطبان استفاده خواهیم کرد.
 
-| Column  | Content |
-| ------------- | ------------- |
-| id  | An integer with the table’s primary key  |
-| name  | A string with the name of a contact  |
-| job  | A string with the job title of a contact  |
-| email  | A string with the email of a contact  |
+| ستون | محتوا |
+| ------ | ------ |
+| id | یک عدد صحیح به عنوان کلید اصلی جدول |
+| name | یک رشته حاوی نام یک مخاطب |
+| job | یک رشته حاوی عنوان شغل یک مخاطب |
+| email | یک رشته حاوی ایمیل یک مخاطب |
 
 ***
 
-### Step 4: Displaying and Updating Existing Contacts
+### مرحله 4: نمایش و به‌روزرسانی مخاطبان موجود
 
-- Creating a Model to Handle the Contact Data
-- Connecting the Model to the View
-- Displaying and Updating Contacts
+- ایجاد یک مدل برای مدیریت داده‌های مخاطبان
+- اتصال مدل به نما
+- نمایش و به‌روزرسانی مخاطبان
 
-To display our contact data in the application’s main window, we can use QTableView. This class is part of PyQt’s Model-View architecture and provides a robust and efficient way of displaying items from a PyQt model object.
+برای نمایش داده‌های مخاطبان خود در پنجره اصلی برنامه، می‌توانیم از QTableView استفاده کنیم. این کلاس بخشی از معماری Model-View PyQt است و روشی قوی و کارآمد برای نمایش موارد از یک شیء مدل PyQt را ارائه می‌دهد.
 
 ![Contact Book Step 4](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%204.png)
 
 ***
 
-### Step 5: Creating New Contacts
+### مرحله 5: ایجاد مخاطبان جدید
 
-- Creating the Add Contact Dialog
-- Launching the Add Contact Dialog
-- Processing the Add Dialog’s Data in the Model
+- ایجاد دیالوگ افزودن مخاطب
+- اجرای دیالوگ افزودن مخاطب
+- پردازش افزودن داده‌های دیالوگ در مدل
 
-At this step, our contact book application provides functionality to load, display, and update the information about our contacts. Even though we’re able to modify and update the contact information, we can neither add nor remove contacts from the list. In this section, we’ll provide the required functionality to add new contacts to the database, using a pop-up dialog to enter the new information.
+در این مرحله، برنامه دفترچه تماس ما قابلیت بارگیری، نمایش و به‌روزرسانی اطلاعات مخاطبان ما را فراهم می‌کند. اگرچه می‌توانیم اطلاعات تماس را اصلاح و به‌روزرسانی کنیم، اما نمی‌توانیم مخاطبان را از لیست اضافه یا حذف کنیم. در این بخش، با استفاده از از یک دیالوگ پنجره‌ای (pop-up) برای ورود اطلاعات جدید، قابلیت مورد نیاز برای اضافه کردن مخاطبان جدید به پایگاه داده را ارائه می‌دهیم.
 
 ![Contact Book Step 5-1](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%205-1.png)
 
-We define a conditional statement that checks if the user has provided data for each field in the dialog. If not, then the dialog shows an error message that warns the user about the missing data.
+ما یک عبارت شرطی تعریف می‌کنیم که بررسی می‌کند آیا کاربر برای هر فیلد در دیالوگ داده‌ها را وارد کرده یا خیر. اگر این کار را انجام نداده باشد، کادر محاوره ای پیام خطایی را نشان می‌دهد که به کاربر در مورد داده‌های ناموجود هشدار می‌دهد.
 
 ![Contact Book Step 5-3](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%205-3.png)
 
-And if the user has provided data for each field in the dialog, then it adds the contact to the database by clicking OK.
+و اگر کاربر برای هر فیلد در دیالوگ داده‌ها را وارد کرده باشد، آنگاه با کلیک بر روی دکمه OK مخاطب را به پایگاه داده اضافه می‌کند.
 
 ![Contact Book Step 5-2](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%205-2.png)
 
 ***
 
-### Step 6: Deleting Existing Contacts
+### مرحله 6: حذف مخاطبان موجود
 
-- Deleting Selected Contacts
-- Clearing the Contact Database
+- حذف مخاطبان انتخاب‌شده
+- پاک کردن پایگاه داده مخاطبان
 
-The final feature we’ll add to the contact book application is the ability to remove contacts from the database using the GUI. In this section, we’ll first add the capability to delete a single contact at a time. Then we’ll add code to remove all the contacts from the database.
+ویژگی نهایی که به اپلیکیشن دفترچه تماس اضافه خواهیم کرد، امکان حذف مخاطبان از پایگاه داده با استفاده از رابط کاربری گرافیکی است. در این بخش، ابتدا قابلیت حذف یک مخاطب به تنهایی را اضافه می‌کنیم. سپس کدی را برای حذف تمام مخاطبان از پایگاه داده اضافه می‌کنیم.
 
-Now when we select a contact from the table view and click Delete, we’re presented with a warning message.
+اکنون وقتی یک مخاطب را از نمای جدول انتخاب میکنیم و روی دکمه حذف کلیک می‌کنیم، با یک پیام هشدار مواجه می‌شویم.
 
 ![Contact Book Step 6-1](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%206-1.png)
 
-If we click the message dialog’s OK button, then the application removes the selected contact from the database, updating the table view accordingly. (Removed Sahar from Database)
+اگر ما بر روی دکمه OK دیالوگ پیام کلیک کنیم، برنامه مخاطب انتخاب شده را از پایگاه داده حذف می‌کند و نمای جدول را به‌طور متناسب با آن به‌روزرسانی می‌کند. (حذف Sahar از پایگاه داده)
 
 ![Contact Book Step 6-2](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%206-2.png)
 
-And to clear all the contacts at the same time, we first create a message dialog to ask the user to confirm the removing operation.
+و برای پاک کردن تمام مخاطبان به یک‌باره، ابتدا یک دیالوگ پیامی ایجاد می‌کنیم تا از کاربر بخواهیم عملیات حذف را تایید کند.
 
 ![Contact Book Step 6-3](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%206-3.png)
 
-If the user confirms the operation by clicking OK, then it removes all the contacts from the database.
+اگر کاربر عملیات را با کلیک بر روی دکمه OK تأیید کند، تمام مخاطبان را از پایگاه داده حذف خواهد کرد.
 
 ![Contact Book Step 6-4](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Files/Contact%20Book%20Step%206-4.png)
