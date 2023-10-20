@@ -1,5 +1,7 @@
 # contact-book-project
 
+- ![Perisan Document ( مستند فارسی )](https://github.com/Noob-Coders-2023/contact-book-project/blob/main/Docs/README-PERSIAN.md)
+
 ## Build a Contact Book With Python, PyQt, and SQLite
  
 ### Project Overview
